@@ -1,3 +1,3 @@
 <?php
 
-echo 123;
+require_once("templates/header.html");
