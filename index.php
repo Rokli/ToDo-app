@@ -1,5 +1,11 @@
 <?php
 
-require_once("templates/header.html");
+require_once("backend/Route.php");
 
-require_once("templates/footer.html");
+$request = $_SERVER['REQUEST_URI'];
+
+$request = strtok($request, '?');
+
+$route = new Route();
+
+$route->route($request);
