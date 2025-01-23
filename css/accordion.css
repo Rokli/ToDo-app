@@ -1,3 +1,22 @@
-.accordion__item:not(.accordion__item_show) .accordion__body {
-    display: none;
-  }
+.accordion {
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  border-radius: 5px;
+  margin-bottom:5px;
+}
+
+.accordion-header {
+  background-color: #ccc;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.accordion-content {
+  padding: 15px;
+  display: none; /* Скрыто по умолчанию */
+  border-top: 1px solid #ccc;
+}
+
+.active .accordion-content {
+  display: block; /* Показать при активном состоянии */
+}
