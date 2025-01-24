@@ -12,11 +12,29 @@
 }
 
 .accordion-content {
-  padding: 15px;
-  display: none; /* Скрыто по умолчанию */
+  padding: 5px;
+  display: none; 
   border-top: 1px solid #ccc;
 }
 
 .active .accordion-content {
-  display: block; /* Показать при активном состоянии */
+  display: block;
+}
+
+.scroll{
+  height: 800px; 
+  overflow-y: scroll; 
+}
+
+.accordion-button{
+  border: none;
+  color: rgb(51, 47, 47);
+  padding: 15px 32px;
+  background-color: #ccc;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
 }
