@@ -8,9 +8,14 @@ document.querySelectorAll('.accordion-header').forEach(header => {
   });
 
 function addEvent(){
-  const input = document.getElementById("accordion-modal-task");
-  const task = input.value;
-  input.value = "";
+  const inputTime = document.getElementById("accordion-modal-time");
+  const inputTask = document.getElementById("accordion-modal-task");
+
+  const task = inputTask.value;
+  const time = inputTime.value;
+
+  inputTask.value = "";
+  inputTime.value = "";
 
   const button = document.getElementById("button-" + dayTrue);
   const accordion = button.closest(".accordion");
@@ -23,7 +28,7 @@ function addEvent(){
   }
 
   const newTask = document.createElement("li");
-  newTask.textContent = task; 
+  newTask.textContent = "Задача: " + task + " Время: " + time; 
   taskList.appendChild(newTask); 
 }
 
