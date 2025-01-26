@@ -28,7 +28,7 @@ function addEvent(){
   }
 
   const newTask = document.createElement("li");
-  newTask.textContent = "Задача: " + task + " Время: " + time; 
+  newTask.textContent = "Задача:" + task + " Время:" + time; 
   taskList.appendChild(newTask); 
 }
 

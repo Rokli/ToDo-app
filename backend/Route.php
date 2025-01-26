@@ -2,12 +2,19 @@
 
 class Route{
     public function route($request){
-        if($request == "/home") {
-            require_once("templates/header.html");
-            require_once("templates/accordion.html");
-            require_once("templates/footer.html");
-        }
+        if($request == "/home") 
+            $this->renderPage("templates/accordion.html");
+
+        if($request == "/login") 
+            $this->renderPage("templates/login.php");
     }
+
+    private function renderPage($body, $header = "templates/header.html",$footer = "templates/footer.html"){
+        require_once($header);
+        require_once($body);
+        require_once($footer);
+    }
+
 }
 ?>
 
