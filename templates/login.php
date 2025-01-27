@@ -3,13 +3,13 @@
         <form action="/login" method="POST" class="login-form">
             <div>
                 <label for="username">Имя пользователя:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" class="login-input" required>
             </div>
 
             <div>
                 <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" class="login-input" required>
             </div>
-            <button type="submit">Войти</button>
+            <button type="submit" class="login-button-entry">Войти</button>
         </form>
 </main>
