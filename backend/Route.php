@@ -7,6 +7,9 @@ class Route{
 
         if($request == "/login") 
             $this->renderPage("templates/login.php");
+        
+        if($request == "/contact")
+            $this->renderPage("templates/contact.html");
     }
 
     private function renderPage($body, $header = "templates/header.html",$footer = "templates/footer.html"){

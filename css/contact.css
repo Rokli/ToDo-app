@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+}
+
+.contact-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+    margin: 0 15px;
+}
+
+.contact-div img {
+    width: 60px; 
+    height: 60px;
+}
+
+.contact-div p{
+    padding: 10px;
+    text-align: center;
+}
+
+.contact-div a{
+    text-decoration: none; 
+    color: inherit; 
+}
+
+
+.contact-div  a:hover, a:focus, a:active {
+    color: inherit; 
+    text-decoration: none; 
+}
