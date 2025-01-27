@@ -1,5 +1,7 @@
 html {
     box-sizing: border-box;
+    height: 100%;
+    width: 100%;
 }
 
 *,
@@ -10,13 +12,6 @@ html {
 
 a {
     text-decoration: none;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -61,4 +56,16 @@ body {
 
 .menu__list-link:hover{
     color: #eb3e30;
+}
+
+
+
+body {
+    margin:0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+    width: 100%;
 }

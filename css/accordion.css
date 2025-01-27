@@ -1,4 +1,5 @@
 .accordion {
+  width: 100%;
   border: 1px solid #ccc;
   margin-top: 15px;
   border-radius: 5px;
@@ -37,6 +38,7 @@
   font-size: 16px;
   padding: 5px;
   cursor: pointer;
+  width: 100%;
 }
 
 .accordion-modal {
@@ -108,4 +110,13 @@
 .accordion-form-content{
   display: flex;
   flex-direction: column;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+  height: 100%;
+  margin: 0%;
 }

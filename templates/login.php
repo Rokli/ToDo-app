@@ -1,5 +1,5 @@
 <main class="login-main">
-    <h1>Войти</h1>
+    <h1>Вход</h1>
         <form action="/login" method="POST" class="login-form">
             <div>
                 <label for="username">Имя пользователя:</label>
