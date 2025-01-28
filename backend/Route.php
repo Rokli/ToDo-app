@@ -1,23 +1,23 @@
 <?php
 
 class Route{
-    public function route($request){
-        if($request == "/home") 
-            $this->renderPage("templates/accordion.html");
+    private $routes;
 
-        if($request == "/login") 
-            $this->renderPage("templates/login.php");
+    public function __construct(){
+        $this->routes = require __DIR__ . "/../core/route.php";
+    }
+    public function route(){
         
-        if($request == "/contact")
-            $this->renderPage("templates/contact.html");
-    }
+        $request = $_SERVER['REQUEST_URI'];
+        $request = strtok($request, '?');
+        
+        $route = $this->routes[$request];
+        $nameController = $route["controller"];
+        $method = $route["method"];
 
-    private function renderPage($body, $header = "templates/header.html",$footer = "templates/footer.html"){
-        require_once($header);
-        require_once($body);
-        require_once($footer);
+        $controller = new $nameController();
+        $controller->$method();
     }
-
 }
 ?>
 
