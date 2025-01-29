@@ -3,7 +3,7 @@
         <form action="/login" method="POST" class="login-form">
             <div>
                 <label for="username">Имя пользователя:</label>
-                <input type="text" id="username" name="username" class="login-input" required>
+                <input type="text" id="username" name="login" class="login-input" required>
             </div>
 
             <div>
