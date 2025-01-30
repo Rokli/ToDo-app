@@ -2,12 +2,14 @@
 
 require_once(__DIR__ . "/Controller.php");
 
+
 class MainController extends Controller{
+
     public function home(){
-        return $this->renderPage("accordion.html");
+        $this->renderDefaultPage("accordion.html.twig");
     }
     public function contact(){
-        return $this->renderPage("contact.html");
+        return $this->renderDefaultPage("contact.html.twig");
     }
 }
 ?>
