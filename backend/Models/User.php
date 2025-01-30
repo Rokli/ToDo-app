@@ -24,7 +24,8 @@ class User {
             ]);
     
         } catch (PDOException $e) {
-            echo "Ошибка при выполнении запроса: " . $e->getMessage();
+            $errorMessage = "Ошибка при выполнении запроса: " . $e->getMessage() . " Время:" .  date('Y-m-d H:i:s') . "\n";
+            error_log($errorMessage,3,__DIR__ . "/../../error.log");
         }
     }
 

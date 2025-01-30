@@ -1,6 +1,6 @@
 <main class="login-main">
     <h1>Вход</h1>
-        <form action="/login" method="POST" class="login-form">
+        <form action="/login/auth" method="POST" class="login-form">
             <div>
                 <label for="username">Имя пользователя:</label>
                 <input type="text" id="username" name="login" class="login-input" required>
