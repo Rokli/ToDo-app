@@ -4,8 +4,14 @@ class User {
     private $login;
     private $password;
 
+    private $authToken;
+
     public function setLogin($login){
         $this->login = $login;
+    }
+
+    public function setAuthToken($authToken){
+        $this->authToken = $authToken;  
     }
 
     public function setPassword($password){
@@ -16,11 +22,12 @@ class User {
         $db = new db();
     
         try {
-            $stmt = $db->connection->prepare("INSERT INTO user (login, password) VALUES (:login, :password)");
+            $stmt = $db->connection->prepare("INSERT INTO user (login, password, authtoken) VALUES (:login, :password, :authtoken)");
     
             $stmt->execute([
                 'login' => $this->login,
-                'password' => $this->password
+                'password' => $this->password,
+                'authtoken' => $this->authToken
             ]);
     
         } catch (PDOException $e) {

@@ -16,5 +16,9 @@ return [
         "controller" => "MainController",
         "method" => "contact"
     ],
+    "/register" => [
+        "controller" => "RegisterController",
+        "method" => "register"
+    ]
 ];
 ?>

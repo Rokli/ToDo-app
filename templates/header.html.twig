@@ -10,9 +10,18 @@
                     <li class="menu__list-item">
                         <a class="menu__list-link" href="#">Поддержать</a>
                     </li>
-                    <li class="menu__list-item">
-                        <a class="menu__list-link" href="/login">Войти</a>
-                    </li>
+                    {% if isToken == false %}
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="/login">Войти</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="/register">Зарегистрироваться</a>
+                        </li>
+                    {% else %}
+                        <li class="menu__list-item">
+                            <a class="menu__list-link" href="#">Выйти</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </nav>
         </div>

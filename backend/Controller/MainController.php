@@ -6,10 +6,16 @@ require_once(__DIR__ . "/Controller.php");
 class MainController extends Controller{
 
     public function home(){
-        $this->renderDefaultPage("accordion.html.twig");
+        if(isset($_COOKIE["auth_token"]))
+            $this->renderDefaultPage("accordion.html.twig",["isToken" => true]);
+        else 
+            $this->renderDefaultPage("accordion.html.twig",["isToken" => false]);
     }
     public function contact(){
-        return $this->renderDefaultPage("contact.html.twig");
+        if(isset($_COOKIE["auth_token"]))
+            $this->renderDefaultPage("contact.html.twig",["isToken" => true]);
+        else 
+            $this->renderDefaultPage("contact.html.twig",["isToken" => false]);
     }
 }
 ?>

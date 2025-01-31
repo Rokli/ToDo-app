@@ -12,8 +12,8 @@ abstract class Controller {
         ]);
         
     }
-    public function renderDefaultPage($body, $header = "header.html.twig",$footer = "footer.html.twig"){
-        echo $this->twig->render($body, []);
+    public function renderDefaultPage($body,$data = [], $header = "header.html.twig",$footer = "footer.html.twig"){
+        echo $this->twig->render($body, $data);
     }
 }
 ?>

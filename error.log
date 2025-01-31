@@ -1,2 +1,6 @@
 Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin' for key 'user.login' Время:2025-01-30 13:33:19
 Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin' for key 'user.login' Время:2025-01-30 13:33:21
+Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '321' for key 'user.login' Время:2025-01-31 13:50:19
+Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '321' for key 'user.login' Время:2025-01-31 13:51:57
+Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '321' for key 'user.login' Время:2025-01-31 17:35:05
+Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123' for key 'user.login' Время:2025-01-31 17:46:32
