@@ -4,7 +4,7 @@ require_once(__DIR__ . "/../Models/User.php");
 
 class AuthController extends Controller{
     public function login(){
-        return $this->renderPage("login.php");
+        return $this->renderDefaultPage("login.html.twig");
     }
 
     public function authorization () {
@@ -15,7 +15,7 @@ class AuthController extends Controller{
             $user->save();
 
         }
-        return $this->renderPage("login.php");
+        return $this->renderDefaultPage("login.html.twig");
     }
 }
 ?>

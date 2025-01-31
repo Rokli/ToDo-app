@@ -1,0 +1,67 @@
+{% extends "base.html.twig" %}
+{% block content %}
+  <main class="scroll">
+    
+    <div class="accordion-modal" id="accordion-modal">
+      <div class="accordion-modal-content">
+        <h2>Добавить задачу</h2>
+        <form id="accordion-event-form">
+          <div class="accordion-form-content">
+            <div>
+            <label for="accordion-modal-task">Задача:</label>
+            <input type="text" id="accordion-modal-task" name="accordion-modal-task" required class="accordion-modal-input">
+            </div>
+            <div>
+            <label for="accordion-modal-time">Время:</label>
+            <input type="time" id="accordion-modal-time" class="accordion-modal-input"/>
+            </div>
+          </div>
+            <button class="accordion-modal-button" type="submit">Добавить</button>
+            <button class="accordion-close-button" onclick="closeModal()">Закрыть</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <button type="button" id="button-monday" class="accordion-button" onclick="openModal('monday')">Добавить задачу</button>
+      <div class="accordion-header"> <p>Понедельник</p> </div>
+      <div class="accordion-content"> </div>
+    </div>
+
+    <div class="accordion">
+      <button type="button" class="accordion-button" id="button-tuesday" onclick="openModal('tuesday')">Добавить задачу</button>
+      <div class="accordion-header"><p>Вторник</p></div>
+      <div class="accordion-content"> </div>
+    </div>
+
+    <div class="accordion">
+      <button type="button" class="accordion-button" id="button-wednesday" onclick="openModal('wednesday')">Добавить задачу</button>
+      <div class="accordion-header"> <p>Среда</p> </div>
+      <div class="accordion-content"> </div>
+    </div>
+
+    <div class="accordion">
+      <button type="button" class="accordion-button" id="button-thursday" onclick="openModal('thursday')">Добавить задачу</button>
+      <div class="accordion-header"> <p>Четверг</p> </div>
+      <div class="accordion-content"> </div>
+    </div>
+
+    <div class="accordion">
+      <button type="button" class="accordion-button" id="button-friday" onclick="openModal('friday')">Добавить задачу</button>
+      <div class="accordion-header"> <p>Пятница</p> </div>
+      <div class="accordion-content"> </div>
+    </div>
+
+    <div class="accordion">
+      <button type="button" class="accordion-button" id="button-saturday" onclick="openModal('saturday')">Добавить задачу</button>
+      <div class="accordion-header"> <p>Суббота</p> </div>
+      <div class="accordion-content"> </div>
+    </div>
+
+    <div class="accordion">
+      <button type="button" class="accordion-button" id="button-sunday" onclick="openModal('sunday')">Добавить задачу</button>
+      <div class="accordion-header"> <p>Воскресенье</p> </div>
+      <div class="accordion-content"> </div>
+    </div>
+  </main>
+{% endblock %}
