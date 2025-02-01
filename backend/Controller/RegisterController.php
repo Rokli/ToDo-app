@@ -8,7 +8,7 @@ class RegisterController extends Controller{
             $user = new User();
 
             $user->setLogin( $_POST['login']);
-            $user->setPassword($_POST['password']);
+            $user->setPassword(password_hash($_POST['password'], PASSWORD_BCRYPT));
             $token = bin2hex(random_bytes(32)); 
             $user->setAuthToken($token);
 

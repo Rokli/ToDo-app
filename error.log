@@ -4,3 +4,10 @@
 Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '321' for key 'user.login' Время:2025-01-31 13:51:57
 Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '321' for key 'user.login' Время:2025-01-31 17:35:05
 Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123' for key 'user.login' Время:2025-01-31 17:46:32
+Ошибка при выполнении запроса: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '123' for key 'user.login' Время:2025-02-01 18:46:10
+Ошибка БД: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auth_token' in 'field list' Время: 2025-02-01 19:12:46
+Ошибка БД: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auth_token' in 'field list' Время: 2025-02-01 19:12:49
+Ошибка БД: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auth_token' in 'field list' Время: 2025-02-01 19:13:12
+Ошибка БД: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auth_token' in 'field list' Время: 2025-02-01 19:13:16
+Ошибка БД: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auth_token' in 'field list' Время: 2025-02-01 19:14:48
+Ошибка БД: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'auth_token' in 'field list' Время: 2025-02-01 19:15:08

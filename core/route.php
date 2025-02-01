@@ -10,7 +10,7 @@ return [
     ],
     "/login/auth" => [
         "controller" => "AuthController",
-        "method" => "authorization"
+        "method" => "login"
     ],
     "/contact" => [
         "controller" => "MainController",
@@ -19,6 +19,10 @@ return [
     "/register" => [
         "controller" => "RegisterController",
         "method" => "register"
+    ],
+    "/login/exit" => [
+        "controller" => "AuthController",
+        "method" => "exit"
     ]
 ];
 ?>

@@ -15,7 +15,7 @@ class User {
     }
 
     public function setPassword($password){
-        $this->password = password_hash($password, PASSWORD_BCRYPT);
+        $this->password = $password;
     }
 
     public function save(){
@@ -36,6 +36,26 @@ class User {
         }
     }
 
+    public function checkAccount() {
+        $db = new db();
+        try {
+            $stmt = $db->connection->prepare("SELECT authtoken, password FROM user WHERE login = :login");
+            $stmt->execute([
+                'login' => $this->login,
+            ]);
+    
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if (!$user || !password_verify($this->password, $user['password'])) {
+                return false; 
+            }
+            return $user['authtoken'];  
+    
+        } catch (PDOException $e) {
+            $errorMessage = "Ошибка БД: " . $e->getMessage() . " Время: " . date('Y-m-d H:i:s') . "\n";
+            error_log($errorMessage, 3, __DIR__ . "/../../error.log");
+            return false; 
+        }
+    }
 }
-
 ?>
