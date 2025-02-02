@@ -57,5 +57,16 @@ class User {
             return false; 
         }
     }
+
+    public static function getIdUser(){
+        $db = new db();
+        $stmt = $db->connection->prepare("SELECT id FROM user WHERE authToken = :authToken");
+        $stmt->execute([
+            "authToken"=> $_COOKIE["auth_token"],
+        ]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        return isset($user["id"]) ? $user["id"] : false;
+    }
 }
 ?>

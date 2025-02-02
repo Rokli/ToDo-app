@@ -23,6 +23,14 @@ return [
     "/login/exit" => [
         "controller" => "AuthController",
         "method" => "exit"
+    ],
+    "/save_task" => [
+        "controller" => "MainController",
+        "method" => "saveTask"
+    ],
+    "/get_task" => [
+        "controller" => "MainController",
+        "method" => "getTask"
     ]
 ];
 ?>
