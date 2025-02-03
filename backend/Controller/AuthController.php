@@ -9,10 +9,9 @@ class AuthController extends Controller{
             $user->setPassword($_POST["password"]);
     
             $authtoken = $user->checkAccount();  
-            var_dump($authtoken);
 
             if (!$authtoken) {
-                header("Location: /login");
+                $this->renderDefaultPage("login.html.twig",["tryInput" => false]);
                 exit();  
             }
             setcookie("auth_token", "", time() - 3600, "/"); 
@@ -20,8 +19,7 @@ class AuthController extends Controller{
 
             header("Location: /home");
         }
-    
-        return $this->renderDefaultPage("login.html.twig");
+        return $this->renderDefaultPage("login.html.twig",["tryInput" => true]);
     }
     
     public function exit(){

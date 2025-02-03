@@ -12,6 +12,9 @@
                 <label for="password">Пароль:</label>
                 <input type="password" id="password" name="password" class="login-input" required>
             </div>
+            {% if tryInput == false %}
+            <p>Неправильно введены данные</p>
+            {% endif %}
             <button type="submit" class="login-button-entry">Войти</button>
         </form>
 </main>
